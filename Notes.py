@@ -34,6 +34,9 @@ text.pack()
 
 menu_bar = Menu(root)
 file_menu = Menu(menu_bar)
+file_menu.add_command(label="Новый файл", menu=new_file)
+file_menu.add_command(label="Открыть", command=open_file)
+file_menu.add_command(label="Сохранить", command=save_file)
 menu_bar.add_cascade(label="Файл", menu=file_menu)
 
 root.config(menu=menu_bar)
